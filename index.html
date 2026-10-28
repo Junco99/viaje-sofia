@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sofía, 7–9 noviembre</title>
+  <meta name="description" content="Nuestro plan para Sofía: ruta, mapa, reservas, precios y cómo no quedar como guiris.">
+  <meta name="theme-color" content="#14223F">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2314223F'/><path d='M3 3l4 4M7 3L3 7M9 9l4 4M13 9l-4 4M9 3l4 4M13 3L9 7M3 9l4 4M7 9l-4 4' stroke='%23C9A13B' stroke-width='1.6'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+</head>
+<body>
+  <header class="hero">
+    <div class="stitch-band" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-kicker">Tres amigos, un fin de semana</p>
+      <h1 class="hero-title" lang="bg">София</h1>
+      <p class="hero-sub">Sofía, del 7 al 9 de noviembre de 2026</p>
+      <p class="countdown" id="countdown"></p>
+    </div>
+  </header>
+
+  <nav class="secciones" aria-label="Secciones">
+    <a href="#plan">Plan</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#precios">Precios</a>
+    <a href="#comer">Comer</a>
+    <a href="#bulgaro">Búlgaro</a>
+    <a href="#respeto">No ofender</a>
+    <a href="#local">Como un local</a>
+    <a href="#info">Info</a>
+  </nav>
+
+  <main>
+    <section id="plan" class="bloque">
+      <div class="tabs" role="tablist" aria-label="Días del viaje" id="tabs"></div>
+
+      <div class="plan-grid">
+        <div class="plan-texto">
+          <header class="dia-cabecera">
+            <h2 id="dia-titulo"></h2>
+            <p id="dia-intro" class="dia-intro"></p>
+            <div id="dia-rutas" class="rutas"></div>
+          </header>
+          <ol id="timeline" class="timeline"></ol>
+          <div id="planb"></div>
+        </div>
+        <div class="plan-mapa">
+          <div id="mapa" role="region" aria-label="Mapa del día"></div>
+          <p class="mapa-nota">Pulsa una parada para verla en el mapa. Las líneas unen paradas, no son calles: para la ruta real, usad los botones de Google Maps.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" class="bloque">
+      <h2>Reservar antes de ir</h2>
+      <p class="lead">Marcad lo que ya esté hecho. Se guarda en este móvil.</p>
+      <p class="progreso" id="reservas-progreso"></p>
+      <ul id="lista-reservas" class="checklist"></ul>
+    </section>
+
+    <section id="precios" class="bloque">
+      <h2>Precios y tiempos</h2>
+      <p class="lead">Aproximados, en euros. Comprobadlos antes de reservar.</p>
+      <div id="tablas-precios" class="tablas"></div>
+    </section>
+
+    <section id="comer" class="bloque">
+      <h2>Lo que hay que probar</h2>
+      <p class="lead">Id marcando lo que probéis. Enseñad la palabra en cirílico si no os entienden.</p>
+      <p class="progreso" id="comer-progreso"></p>
+      <ul id="lista-comer" class="comidas"></ul>
+    </section>
+
+    <section id="bulgaro" class="bloque">
+      <h2>Búlgaro de supervivencia</h2>
+      <p class="lead">Un «благодаря» abre muchas puertas. Pulsad una frase para oírla, si vuestro móvil tiene voz en búlgaro.</p>
+      <ul id="lista-frases" class="frases"></ul>
+      <h3>Leer los carteles</h3>
+      <p class="lead">Las letras que más confunden:</p>
+      <dl id="cirilico" class="cirilico"></dl>
+    </section>
+
+    <section id="respeto" class="bloque">
+      <h2>Para no ofender a nadie</h2>
+      <ul id="lista-respeto" class="consejos"></ul>
+    </section>
+
+    <section id="local" class="bloque">
+      <h2>Como un búlgaro de verdad</h2>
+      <ul id="lista-local" class="consejos"></ul>
+    </section>
+
+    <section id="info" class="bloque">
+      <h2>Lo práctico</h2>
+      <dl id="lista-info" class="info"></dl>
+      <h3>Enlaces útiles</h3>
+      <ul id="lista-enlaces" class="enlaces"></ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="stitch-band" aria-hidden="true"></div>
+    <p lang="bg">Наздраве!</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/data.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
+</body>
+</html>
